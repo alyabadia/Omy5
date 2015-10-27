@@ -1,0 +1,6 @@
+-rw-r--r--  1 rbeas  staff  39014 Oct 27 10:11 Omy5_survey/Omy5_survey_merged_data/MAHP_twocol.txt
+-rw-r--r--  1 rbeas  staff  38997 Oct 27 10:11 Omy5_survey/Omy5_survey_merged_data/MAHT_MAGC_twocol.txt
+-rw-r--r--  1 rbeas  staff  39037 Oct 27 10:11 Omy5_survey/Omy5_survey_merged_data/MAIS_twocol.txt
+-rw-r--r--  1 rbeas  staff  39014 Oct 27 10:11 Omy5_survey/Omy5_survey_merged_data/MPP_MGZrr_twocol.txt
+-rw-r--r--  1 rbeas  staff  39013 Oct 27 10:11 Omy5_survey/Omy5_survey_merged_data/MUD_twocol.txt
+-rw-r--r--  1 rbeas  staff  39013 Oct 27 10:11 Omy5_survey/Omy5_survey_merged_data/MWV_twocol.txt
