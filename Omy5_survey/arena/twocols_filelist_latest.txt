@@ -1,0 +1,6 @@
+-rw-r--r--  1 aliciaabadia  staff  39014 Oct 26 15:44 Omy5_survey/twocol_data/MAHP_twocol.txt
+-rw-r--r--  1 aliciaabadia  staff  38997 Oct 26 15:44 Omy5_survey/twocol_data/MAHT_MAGC_twocol.txt
+-rw-r--r--  1 aliciaabadia  staff  39037 Oct 26 15:44 Omy5_survey/twocol_data/MAIS_twocol.txt
+-rw-r--r--  1 aliciaabadia  staff  39014 Oct 26 15:44 Omy5_survey/twocol_data/MPP_MGZrr_twocol.txt
+-rw-r--r--  1 aliciaabadia  staff  39013 Oct 26 15:44 Omy5_survey/twocol_data/MUD_twocol.txt
+-rw-r--r--  1 aliciaabadia  staff  39013 Oct 26 15:44 Omy5_survey/twocol_data/MWV_twocol.txt
