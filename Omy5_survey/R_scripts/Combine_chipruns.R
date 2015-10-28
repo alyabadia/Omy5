@@ -50,10 +50,15 @@ All_genos <- do.call(rbind, loci) ## combine the tables in the list
 #head(All_genos)
 #write.csv(All_genos,file='All_genotypes.csv')
 
-### Find duplicates ####
+### Eliminate high missers and find duplicates ####
 
-duplicados<-anyDuplicated(All_genos[row.names(All_genos),]) ## find duplicated rows, for example, reruns
+# First create a new column call sum
 
+rowsum???????
+
+duplicados<-duplicated(All_genos[row.names(All_genos),]) ## find duplicated rows, for example, reruns
+
+duplicados <- All_genos[duplicated(All_genos[row.names(All_genos),])]
 
 All_genos<-All_genos[!(duplicados),] ## eliminates all the duplicates
 
