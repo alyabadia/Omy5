@@ -37,6 +37,10 @@ cols = read.table("Omy5_survey/resources/Omy5_86loci.csv", as.is = T)# or use a 
 
 cbind(cols[,1], cols[,1] %in%colnames(tables[[1]])) ## Check if the table one has the loci (columns) of interest
 
+##### NOTE: Hay varios problemas que quiero resolver. 1. ¿Cómo identificar cuando un SNP fue remplaxado por otro? por ejemplo, la mitad de los chips se corrieron con SNPset que incluye Omy_121006 y la otra mitad con SNPsetv2 donde Omy_121006 fue remplazado por R94044. Creo que lo que debo hacer es hacer una lista de todos los posibles SNP names y que automaticamente me agrege una columna para cada SNP en las respectivas tablas con ceros. #### 
+
+
+
 ### Combine all tables ####
 # Extracting columns from each dataframe only works if the column names are the same--including case!!!
 loci <- lapply(tables, function(x){x[, cols[,1]]}) ## subset the columns that we need 
@@ -45,6 +49,16 @@ All_genos <- do.call(rbind, loci) ## combine the tables in the list
 
 #head(All_genos)
 #write.csv(All_genos,file='All_genotypes.csv')
+
+### Find duplicates ####
+
+duplicados<-anyDuplicated(All_genos[row.names(All_genos),]) ## find duplicated rows, for example, reruns
+
+
+All_genos<-All_genos[!(duplicados),] ## eliminates all the duplicates
+
+
+# NOTE: tengo que identificar y borrar los duplicados aquí, antes de split columns porque si no me sale un error que dice duplicate 'row.names' are not allowed
 
 #### Split columns ####
 
