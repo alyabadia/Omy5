@@ -46,22 +46,17 @@ All_genos <- do.call(rbind, loci) ## combine the tables in the list
 #head(All_genos)
 #write.csv(All_genos,file='All_genotypes.csv')
 
-# #### Split columns ####
-# 
-# # The next step would be to merge the metadata (repository) with the genotypes (All_genos)
-# # To merge two datasets, both have to have at least one variable in common. Therefore, the first column (sample_ID) has to be split as follows:
-# 
-# All_genos["NMFS_ID"] <- row.names(All_genos)
-# rn <- rownames(All_genos)
-# m1 <- do.call(rbind, strsplit(rn, '_'))
-# row.names(All_genos) <- m1[,1]
-# All_genos['boxID'] <- m1[,2]
-# All_genos['boxPos'] <- m1[,3]
+#### Split columns ####
 
-#head(All_genos)
+# The next step would be to merge the metadata (repository) with the genotypes (All_genos)
+# To merge two datasets, both have to have at least one variable in common. Therefore, the first column (sample_ID) has to be split as follows:
 
-#### Import the metadata table (repository data)
+All_genos["NMFS_ID"] <- row.names(All_genos)
+rn <- rownames(All_genos)
+m1 <- do.call(rbind, strsplit(rn, '_'))
+row.names(All_genos) <- m1[,1]
+All_genos['boxID'] <- m1[,2]
+All_genos['boxPos'] <- m1[,3]
 
-Meta = read.csv("Omy5_survey/twocol_data/All_Omykiss101615.csv", header=T, row.names = 1)
-head(Meta)
+head(All_genos)
 
